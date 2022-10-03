@@ -1,0 +1,30 @@
+.registration {
+  &__wrapper {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 370px;
+    background-color: white;
+    border-radius: 15px;
+    opacity: 0.9;
+  }
+  &__title {
+    color: #3949AB;
+  }
+  &__subtitle {
+    color: #3949AB;
+  }
+  &__text {
+    color: #3949AB;
+  }
+}
+.form {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
