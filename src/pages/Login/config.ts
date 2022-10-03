@@ -1,16 +1,6 @@
-interface configProps{
-  name: string,
-  placeholder: string,
-  type: string,
-  validation: [
-    {
-      name: string,
-      validValue: number,
-    }
-  ]
-}
+import configProps from "src/components/config-props";
 
-const config = [
+const config: configProps[] = [
   {
     name: "Name",
     placeholder: "Enter your name",
