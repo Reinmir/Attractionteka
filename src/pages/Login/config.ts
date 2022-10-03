@@ -1,4 +1,4 @@
-import configProps from "src/components/config-props";
+import configProps from "src/interfaces/config-props";
 
 const config: configProps[] = [
   {
