@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "src/components/Button/Button";
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
-import Input from "src/components/Input/Input";
+
 import config from "./config";
 
 import "./style.scss";

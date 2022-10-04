@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "src/components/Button/Button";
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
-import Input from "src/components/Input/Input";
 
 import config from "./config";
 import "./style.scss";
@@ -15,9 +14,7 @@ const Login = () => {
         <h2 className="login__subtitle">Please log in to continue!</h2>
         <form action="" className="form__container">
           <FormBuilder config={config} />
-          <Button>
-            <p className="button__text">Log in</p>
-          </Button>
+          <Button>Log in</Button>
         </form>
         <p className="login__toRegistration">
           Don't have an account? <Link to="/registration">Sign Up</Link>
