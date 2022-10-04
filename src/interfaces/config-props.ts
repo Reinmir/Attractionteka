@@ -1,4 +1,4 @@
-interface configProps {
+interface ConfigProps {
   name: string;
   placeholder: string;
   type: string;
@@ -14,4 +14,4 @@ interface configProps {
   ];
 }
 
-export default configProps;
+export default ConfigProps;
