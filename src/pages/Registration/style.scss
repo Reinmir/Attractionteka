@@ -1,3 +1,6 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
 .registration {
   &__wrapper {
     text-align: center;
@@ -9,16 +12,18 @@
     width: 370px;
     background-color: white;
     border-radius: 15px;
-    opacity: 0.9;
   }
   &__title {
     color: #3949ab;
+    font-weight: 900;
   }
   &__subtitle {
     color: #3949ab;
+    font-weight: 700;
   }
   &__text {
     color: #3949ab;
+    font-weight: 400;
   }
 }
 .form {

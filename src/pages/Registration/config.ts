@@ -1,10 +1,12 @@
 import configProps from "src/interfaces/config-props";
+import EnumIcons from "src/interfaces/enumIcons";
 
 const config: configProps[] = [
   {
     name: "name",
     placeholder: "Enter your name",
     type: "text",
+    icon: EnumIcons.userIcon,
     validations: [
       {
         name: "maxLength",
@@ -20,6 +22,7 @@ const config: configProps[] = [
     name: "surname",
     placeholder: "Enter your surname",
     type: "text",
+    icon: EnumIcons.userIcon,
     validations: [
       {
         name: "maxLength",
@@ -35,11 +38,13 @@ const config: configProps[] = [
     name: "email",
     placeholder: "Enter your email",
     type: "email",
+    icon: EnumIcons.emailIcon,
   },
   {
     name: "password",
     placeholder: "Enter your password",
     type: "password",
+    icon: EnumIcons.passwordIcon,
     validations: [
       {
         name: "maxLength",
@@ -55,7 +60,8 @@ const config: configProps[] = [
     name: "password",
     placeholder: "Confirm your password",
     type: "password",
-  }
+    icon: EnumIcons.confirmIcon,
+  },
 ];
 
 export default config;

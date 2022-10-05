@@ -1,8 +1,22 @@
-.customInput {
-  width: 330px;
-  height: 35px;
-  border: 0.3px solid #111c5a;
-  border-radius: 10px;
-  flex-direction: column;
-  margin: 10px;
+.input {
+  &__container {
+    position: relative;
+    width: 18vw;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  &__customInput {
+    height: 35px;
+    border: 0.3px solid #111c5a;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 10px;
+    color: #3949ab;
+    padding-left: 35px;
+  }
 }
