@@ -7,6 +7,7 @@ import config from "./config";
 import "./style.scss";
 
 const Login = () => {
+  
   return (
     <>
       <div className="login__wrapper">
