@@ -6,17 +6,18 @@ const config: configProps[] = [
     name: "Email",
     placeholder: "Enter your email",
     type: "email",
-    icon: EnumIcons.emailIcon,
+    leftIcon: EnumIcons.emailIcon,
   },
   {
     name: "Password",
     placeholder: "Enter your password",
     type: "password",
-    icon: EnumIcons.passwordIcon,
+    leftIcon: EnumIcons.passwordIcon,
+    rightIcon: EnumIcons.visibleIcon,
     validations: [
       {
         name: "maxLength",
-        validValue: 10,
+        validValue: 20,
       },
       {
         name: "minLength",

@@ -3,6 +3,8 @@ enum EnumIcons {
   userIcon = "userIcon",
   passwordIcon = "passwordIcon",
   confirmIcon = "confirmIcon",
+  visibleIcon = "visibleIcon",
+  invisibleIcon = "invisibleIcon",
 }
 
 export default EnumIcons;
