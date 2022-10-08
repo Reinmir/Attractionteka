@@ -6,7 +6,7 @@ const config: configProps[] = [
     name: "name",
     placeholder: "Enter your name",
     type: "text",
-    icon: EnumIcons.userIcon,
+    leftIcon: EnumIcons.userIcon,
     validations: [
       {
         name: "maxLength",
@@ -22,7 +22,7 @@ const config: configProps[] = [
     name: "surname",
     placeholder: "Enter your surname",
     type: "text",
-    icon: EnumIcons.userIcon,
+    leftIcon: EnumIcons.userIcon,
     validations: [
       {
         name: "maxLength",
@@ -38,13 +38,14 @@ const config: configProps[] = [
     name: "email",
     placeholder: "Enter your email",
     type: "email",
-    icon: EnumIcons.emailIcon,
+    leftIcon: EnumIcons.emailIcon,
   },
   {
     name: "password",
     placeholder: "Enter your password",
     type: "password",
-    icon: EnumIcons.passwordIcon,
+    leftIcon: EnumIcons.passwordIcon,
+    rightIcon: EnumIcons.visibleIcon,
     validations: [
       {
         name: "maxLength",
@@ -60,7 +61,8 @@ const config: configProps[] = [
     name: "password",
     placeholder: "Confirm your password",
     type: "password",
-    icon: EnumIcons.confirmIcon,
+    leftIcon: EnumIcons.confirmIcon,
+    rightIcon: EnumIcons.visibleIcon,
   },
 ];
 

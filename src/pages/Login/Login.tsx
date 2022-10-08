@@ -15,6 +15,7 @@ const Login = () => {
         <h2 className="login__subtitle">Please log in to continue!</h2>
         <form action="" className="form__container">
           <FormBuilder config={config} />
+          <Link to='/forgot_password'>Forgot password?</Link>
           <Button>Log in</Button>
         </form>
         <p className="login__toRegistration">

@@ -4,7 +4,8 @@ interface ConfigProps {
   name: string;
   placeholder: string;
   type: string;
-  icon?: EnumIcons;
+  leftIcon?: EnumIcons;
+  rightIcon?: EnumIcons;
   validations?: [
     {
       name: string;

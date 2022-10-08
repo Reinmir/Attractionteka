@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ConfigProps from "src/interfaces/config-props";
 import Input from "../Input/Input";
 
