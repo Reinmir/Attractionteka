@@ -1,3 +1,4 @@
+import { invisibleIcon, visibleIcon } from "src/components/Input/inputIcons";
 import configProps from "src/interfaces/config-props";
 import EnumIcons from "src/interfaces/enumIcons";
 
@@ -13,7 +14,7 @@ const config: configProps[] = [
     placeholder: "Enter your password",
     type: "password",
     leftIcon: EnumIcons.passwordIcon,
-    rightIcon: EnumIcons.visibleIcon,
+    rightIcon: visibleIcon || invisibleIcon,
     validations: [
       {
         name: "maxLength",

@@ -5,7 +5,7 @@ interface ConfigProps {
   placeholder: string;
   type: string;
   leftIcon?: EnumIcons;
-  rightIcon?: EnumIcons;
+  rightIcon?: JSX.Element;
   validations?: [
     {
       name: string;

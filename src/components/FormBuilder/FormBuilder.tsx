@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ConfigProps from "src/interfaces/config-props";
 import Input from "../Input/Input";
+import PasswordInput from "../PasswordInput/PasswordInput";
 
 interface FormBuilderProps {
   config: ConfigProps[];
@@ -10,7 +11,15 @@ const FormBuilder: React.FC<FormBuilderProps> = ({ config }) => {
   return (
     <>
       {config.map((item) => {
-        return <Input {...item} />;
+        return (
+          <>
+            {item.type === "password" ? (
+              <PasswordInput {...item} />
+            ) : (
+              <Input {...item} />
+            )}
+          </>
+        );
       })}
     </>
   );

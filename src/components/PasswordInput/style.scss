@@ -1,0 +1,12 @@
+.inputPassword {
+  &__visible {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
