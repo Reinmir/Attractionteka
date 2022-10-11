@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import Button from "src/components/Button/Button";
@@ -9,6 +9,8 @@ import config from "./config";
 import "./style.scss";
 
 const Registration = () => {
+
+
   return (
     <>
       <div className="registration__wrapper">
@@ -17,7 +19,9 @@ const Registration = () => {
         <h3 className="registration__text">Please register to continue!</h3>
         <form action="" className="form__container">
           <FormBuilder config={config} />
-          <Button>Register</Button>
+          <Button disabled onClick={() => {}}>
+            Register
+          </Button>
         </form>
         <p>
           Alredy have an account? <Link to="/login">Log in</Link>

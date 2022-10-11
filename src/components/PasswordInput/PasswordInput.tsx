@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import Input from "../Input/Input";
 import ConfigProps from "src/interfaces/config-props";
 import "./style.scss";
-import EnumIcons from "src/interfaces/enumIcons";
+
 import { invisibleIcon, visibleIcon } from "../Input/inputIcons";
 
 const PasswordInput: React.FC<ConfigProps> = ({

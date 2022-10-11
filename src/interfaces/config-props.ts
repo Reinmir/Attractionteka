@@ -6,16 +6,7 @@ interface ConfigProps {
   type: string;
   leftIcon?: EnumIcons;
   rightIcon?: JSX.Element;
-  validations?: [
-    {
-      name: string;
-      validValue: number;
-    },
-    {
-      name: string;
-      validValue: number;
-    }
-  ];
+
 }
 
 export default ConfigProps;

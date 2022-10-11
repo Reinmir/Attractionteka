@@ -1,4 +1,4 @@
-*{
+* {
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -24,8 +24,13 @@
     font-weight: 400;
     margin-bottom: 50px;
   }
-  &__toRegistration{
+  &__toRegistration {
     margin-top: 180px;
+  }
+  &__toForgot {
+    position: relative;
+    left: 85px;
+    top: -5px;
   }
 }
 .form {

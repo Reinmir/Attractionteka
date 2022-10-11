@@ -15,16 +15,16 @@ const config: configProps[] = [
     type: "password",
     leftIcon: EnumIcons.passwordIcon,
     rightIcon: visibleIcon || invisibleIcon,
-    validations: [
-      {
-        name: "maxLength",
-        validValue: 20,
-      },
-      {
-        name: "minLength",
-        validValue: 2,
-      },
-    ],
+    // validations: [
+    //   {
+    //     name: "maxLength",
+    //     validValue: 20,
+    //   },
+    //   {
+    //     name: "minLength",
+    //     validValue: 2,
+    //   },
+    // ],
   },
 ];
 
