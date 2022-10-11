@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import ConfigProps from "src/interfaces/config-props";
+import { ValidationsProps } from "src/interfaces/config-validations";
 
 import { confirmIcon, emailIcon, passwordIcon, userIcon } from "./inputIcons";
 
@@ -22,28 +23,6 @@ const Input: React.FC<InputProps> = ({
   className,
   toggleRightIcon,
 }) => {
-
-
-  const useValidation = (value: string, validations: ConfigProps[]) =>{
-
-  }
-
-
-  const useInput = (intialValue: any) => {
-    const [value, setValue] = useState(intialValue);
-    const [isDirty, setDirty] = useState(false);
-    const onChange = (e: any) => {
-      setValue(e.target.value);
-    };
-
-    const onBlur = () => {
-      setDirty(true);
-    };
-    return { value, onChange, onBlur };
-  };
-
-  const inputValue = useInput("");
-
   const changeIcon = () => {
     switch (leftIcon) {
       case "emailIcon":
@@ -62,9 +41,6 @@ const Input: React.FC<InputProps> = ({
       <div className="input__container">
         <div className="input__icon">{changeIcon()}</div>
         <input
-          value={inputValue.value}
-          onChange={inputValue.onChange}
-          onBlur={inputValue.onBlur}
           type={type}
           name={name}
           placeholder={placeholder}
