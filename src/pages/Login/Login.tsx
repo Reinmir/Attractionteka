@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Button from "src/components/Button/Button";
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
@@ -7,8 +7,6 @@ import config from "./config";
 import "./style.scss";
 
 const Login = () => {
-  
-
   return (
     <>
       <div className="login__wrapper">
