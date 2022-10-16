@@ -4,10 +4,20 @@ import ConfigProps from "src/interfaces/config-props";
 import "./style.scss";
 
 import { invisibleIcon, visibleIcon } from "../Input/inputIcons";
+import InputConfigsProps from "src/types/InputConfigs";
 
-const PasswordInput: React.FC<ConfigProps> = ({
+interface PasswordInputProps extends ConfigProps {
+  onChange: Function;
+  onBlur: Function;
+  error: any;
+}
+
+const PasswordInput: React.FC<PasswordInputProps> = ({
   type,
   rightIcon,
+  onChange,
+  onBlur,
+  error,
   ...props
 }) => {
   const [inputType, setInputType] = useState(type);
@@ -19,7 +29,7 @@ const PasswordInput: React.FC<ConfigProps> = ({
     } else {
       setInputType("password");
     }
-    console.log('1')
+    console.log("1");
   };
 
   const rightIconVisible = useMemo(() => {
@@ -40,6 +50,9 @@ const PasswordInput: React.FC<ConfigProps> = ({
         rightIcon={rightIconVisible}
         {...props}
         type={inputType}
+        onBlur={onBlur}
+        onChange={onChange}
+        error={error}
       />
     </>
   );
