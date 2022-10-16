@@ -1,12 +1,6 @@
-export interface ValidationsProps {
-  validations?: [
-    {
-      name: string;
-      validValue: number;
-    },
-    {
-      name: string;
-      validValue: number;
-    }
-  ];
+interface ValidationsProps {
+  validName?: "minLength" | "maxLength" | "isEmail" | "isSame";
+  validValue?: string | number | void ;
 }
+
+export default ValidationsProps;

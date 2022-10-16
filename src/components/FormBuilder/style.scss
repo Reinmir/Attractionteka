@@ -4,3 +4,10 @@
     flex-direction: column;
   }
 }
+.form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 10wv;
+  }
+}

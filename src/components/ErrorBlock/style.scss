@@ -1,0 +1,25 @@
+.error {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 330px;
+    height: 30px;
+    background: #dfb0b0;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  &__container {
+
+    color: #e11d48;
+    font-weight: 400;
+    font-family: "Nunito Sans";
+  }
+  &__icon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+  }
+}

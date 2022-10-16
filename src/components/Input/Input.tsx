@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import ConfigProps from "src/interfaces/config-props";
-import { ValidationsProps } from "src/interfaces/config-validations";
 
 import { confirmIcon, emailIcon, passwordIcon, userIcon } from "./inputIcons";
 
@@ -11,6 +10,9 @@ interface InputProps extends ConfigProps {
   toggleRightIcon?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
   value?: string;
+  onChange?: any;
+  onBlur?: any;
+  error?: any;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -21,6 +23,8 @@ const Input: React.FC<InputProps> = ({
   leftIcon,
   rightIcon,
   className,
+  onChange,
+  onBlur,
   toggleRightIcon,
 }) => {
   const changeIcon = () => {
@@ -42,6 +46,9 @@ const Input: React.FC<InputProps> = ({
         <div className="input__icon">{changeIcon()}</div>
         <input
           type={type}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
           name={name}
           placeholder={placeholder}
           className={`${className} input__customInput`}

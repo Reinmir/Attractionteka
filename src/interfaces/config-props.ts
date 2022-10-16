@@ -1,3 +1,4 @@
+import ValidationsProps from "./config-validations";
 import EnumIcons from "./enumIcons";
 
 interface ConfigProps {
@@ -6,7 +7,7 @@ interface ConfigProps {
   type: string;
   leftIcon?: EnumIcons;
   rightIcon?: JSX.Element;
-
+  validations?: ValidationsProps[];
 }
 
 export default ConfigProps;
