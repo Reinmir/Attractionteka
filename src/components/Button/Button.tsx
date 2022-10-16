@@ -7,21 +7,10 @@ interface ButtonProps extends React.PropsWithChildren {
   className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  onClick,
-  disabled,
-  className,
-}) => {
+const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
   return (
     <>
-      <button
-        disabled={disabled}
-        onClick={onClick}
-        className={`customButton ${className} `}
-      >
-        {children}
-      </button>
+      <button {...props}>{children}</button>
     </>
   );
 };
