@@ -118,11 +118,12 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
                 />
               )}
               {item.validError && <ErrorBlock>{item.validError}</ErrorBlock>}
+              
             </>
           );
         })}
         {aboveLink}
-        <Button disabled={!itemProperties}>Register</Button>
+        <Button disabled>Register</Button>
       </form>
     </>
   );
