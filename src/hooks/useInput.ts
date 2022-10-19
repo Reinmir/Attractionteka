@@ -28,7 +28,7 @@ export const useInput = ({ config, setInputValues }: useInputProps) => {
   const getError = (
     value: string,
     validations: ValidationsProps[] | undefined = [],
-    index: number
+    
   ) => {
     let res = "";
     for (const validation of validations) {
@@ -69,7 +69,7 @@ export const useInput = ({ config, setInputValues }: useInputProps) => {
       newItemProperties[index].validError = getError(
         newItemProperties[index].value,
         newItemProperties[index].validations,
-        index
+        
       );
     }
     setItemProperties(newItemProperties);

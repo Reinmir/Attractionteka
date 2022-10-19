@@ -9,11 +9,19 @@ import PasswordInput from "../PasswordInput/PasswordInput";
 import ErrorBlock from "../ErrorBlock/ErrorBlock";
 import { useInput } from "src/hooks/useInput";
 
+import "./style.scss";
+import InputConfigsProps from "src/types/InputConfigs";
+import ValidationsProps from "src/interfaces/config-validations";
+
+import * as util from "src/util";
+
 interface FormBuilderProps {
   config: ConfigProps[];
   setInputValues?: Function;
   aboveLink?: React.ReactNode;
-  label: string;
+  label?: string;
+  className?: string;
+  classNameButton?: string;
 }
 
 const FormBuilder: React.FC<FormBuilderProps> = ({
@@ -21,6 +29,8 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
   setInputValues,
   aboveLink,
   label,
+  className,
+  classNameButton,
 }) => {
   const { checkValidation, handleSubmit, itemProperties, setValue } = useInput({
     config,
@@ -31,9 +41,15 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
     (item) => item.validError !== "" || item.value === ""
   );
 
+  const onClickSubmit = () => {};
+
   return (
     <>
-      <form onSubmit={handleSubmit} className="form__container" action="submit">
+      <form
+        onSubmit={handleSubmit}
+        className={`form__container ${className}`}
+        action="submit"
+      >
         {itemProperties.map((item, index) => {
           return (
             <>
@@ -61,7 +77,13 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
           );
         })}
         {aboveLink}
-        <Button disabled={isDisabled}>{label}</Button>
+        <Button
+          className={classNameButton}
+          onClick={() => {}}
+          disabled={isDisabled}
+        >
+          {label}
+        </Button>
       </form>
     </>
   );

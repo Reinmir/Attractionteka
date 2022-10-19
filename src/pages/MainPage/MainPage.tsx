@@ -4,8 +4,6 @@ import './style.scss'
 
 const MainPage = () => {
 
-
-
   return <div></div>;
 };
 
