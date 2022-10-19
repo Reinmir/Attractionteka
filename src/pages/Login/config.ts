@@ -1,27 +1,29 @@
+import { invisibleIcon, visibleIcon } from "src/components/Input/inputIcons";
 import configProps from "src/interfaces/config-props";
 import EnumIcons from "src/interfaces/enumIcons";
 
 const config: configProps[] = [
   {
-    name: "Email",
+    name: "email",
     placeholder: "Enter your email",
     type: "email",
     leftIcon: EnumIcons.emailIcon,
+    validations: [
+      {
+        validName: "isEmail",
+      },
+    ],
   },
   {
-    name: "Password",
+    name: "password",
     placeholder: "Enter your password",
     type: "password",
     leftIcon: EnumIcons.passwordIcon,
-    rightIcon: EnumIcons.visibleIcon,
+    rightIcon: visibleIcon || invisibleIcon,
     validations: [
       {
-        name: "maxLength",
-        validValue: 20,
-      },
-      {
-        name: "minLength",
-        validValue: 2,
+        validName: "minLength",
+        validValue: 6,
       },
     ],
   },

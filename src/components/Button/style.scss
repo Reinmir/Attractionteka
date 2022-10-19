@@ -9,3 +9,15 @@
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
 }
+
+.customButton:disabled {
+  background: grey;
+  border: none;
+  border-radius: 40px;
+  width: 330px;
+  height: 35px;
+  cursor: not-allowed;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+}

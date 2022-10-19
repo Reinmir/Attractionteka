@@ -1,7 +1,7 @@
 .input {
   &__container {
     position: relative;
-    width: 18vw;
+    width: 330px;
   }
   &__icon {
     width: 20px;
@@ -10,14 +10,7 @@
     top: 20px;
     left: 20px;
   }
-  &__visible {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 20px;
-    left: 300px;
-    cursor: pointer;
-  }
+
   &__customInput {
     height: 35px;
     border: 0.3px solid #111c5a;
@@ -27,5 +20,4 @@
     color: #3949ab;
     padding-left: 35px;
   }
-
 }

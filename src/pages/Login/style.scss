@@ -1,4 +1,4 @@
-*{
+* {
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -9,8 +9,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 600px;
-    width: 370px;
+    min-height: 600px;
+    min-width: 370px;
     background-color: white;
     border-radius: 15px;
   }
@@ -24,16 +24,16 @@
     font-weight: 400;
     margin-bottom: 50px;
   }
-  &__toRegistration{
+  &__toRegistration {
     margin-top: 180px;
   }
-}
-.form {
-  &__container {
-    display: flex;
-    flex-direction: column;
+  &__toForgot {
+    position: relative;
+    left: 85px;
+    top: -5px;
   }
 }
+
 
 .input {
   &__container {

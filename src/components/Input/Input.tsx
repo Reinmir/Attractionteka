@@ -2,31 +2,31 @@ import React, { useState } from "react";
 
 import ConfigProps from "src/interfaces/config-props";
 
-import {
-  confirmIcon,
-  emailIcon,
-  passwordIcon,
-  userIcon,
-  visibleIcon,
-} from "./inputIcons";
+import { confirmIcon, emailIcon, passwordIcon, userIcon } from "./inputIcons";
 
 import "./style.scss";
 
-interface InputProps extends ConfigProps {}
+interface InputProps extends ConfigProps {
+  toggleRightIcon?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  className?: string;
+  value?: string;
+  onChange?: any;
+  onBlur?: any;
+  error?: any;
+}
 
 const Input: React.FC<InputProps> = ({
   name,
   placeholder,
   type,
+  value,
   leftIcon,
   rightIcon,
+  className,
+  onChange,
+  onBlur,
+  toggleRightIcon,
 }) => {
-  const [visible, setVisible] = useState(false);
-
-  const toggleVisible = () => {
-    
-  };
-
   const changeIcon = () => {
     switch (leftIcon) {
       case "emailIcon":
@@ -40,24 +40,24 @@ const Input: React.FC<InputProps> = ({
     }
   };
 
-  const iconVisible = () => {
-    switch (rightIcon) {
-      case "visibleIcon":
-        return visibleIcon;
-    }
-  };
-
   return (
     <>
       <div className="input__container">
         <div className="input__icon">{changeIcon()}</div>
-        <div className="input__visible" onClick={toggleVisible}>{iconVisible()}</div>
         <input
           type={type}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
           name={name}
           placeholder={placeholder}
-          className="input__customInput"
+          className={`${className} input__customInput`}
         />
+        {rightIcon && toggleRightIcon && (
+          <button className="inputPassword__visible" onClick={toggleRightIcon}>
+            {rightIcon}
+          </button>
+        )}
       </div>
     </>
   );

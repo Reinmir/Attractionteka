@@ -1,4 +1,6 @@
+import { invisibleIcon, visibleIcon } from "src/components/Input/inputIcons";
 import configProps from "src/interfaces/config-props";
+
 import EnumIcons from "src/interfaces/enumIcons";
 
 const config: configProps[] = [
@@ -9,11 +11,11 @@ const config: configProps[] = [
     leftIcon: EnumIcons.userIcon,
     validations: [
       {
-        name: "maxLength",
+        validName: "maxLength",
         validValue: 20,
       },
       {
-        name: "minLength",
+        validName: "minLength",
         validValue: 2,
       },
     ],
@@ -25,11 +27,11 @@ const config: configProps[] = [
     leftIcon: EnumIcons.userIcon,
     validations: [
       {
-        name: "maxLength",
+        validName: "maxLength",
         validValue: 20,
       },
       {
-        name: "minLength",
+        validName: "minLength",
         validValue: 2,
       },
     ],
@@ -39,30 +41,37 @@ const config: configProps[] = [
     placeholder: "Enter your email",
     type: "email",
     leftIcon: EnumIcons.emailIcon,
+    validations:[
+    {
+      validName: 'isEmail',
+    }
+    ]
   },
   {
     name: "password",
     placeholder: "Enter your password",
     type: "password",
     leftIcon: EnumIcons.passwordIcon,
-    rightIcon: EnumIcons.visibleIcon,
+    rightIcon: visibleIcon || invisibleIcon,
     validations: [
       {
-        name: "maxLength",
-        validValue: 20,
-      },
-      {
-        name: "minLength",
-        validValue: 2,
+        validName: "minLength",
+        validValue: 6,
       },
     ],
   },
   {
-    name: "password",
+    name: "confirm_password",
     placeholder: "Confirm your password",
     type: "password",
     leftIcon: EnumIcons.confirmIcon,
-    rightIcon: EnumIcons.visibleIcon,
+    rightIcon: visibleIcon || invisibleIcon,
+    validations: [
+      {
+        validName: "isSame",
+        validValue: "password",
+      },
+    ],
   },
 ];
 

@@ -5,6 +5,7 @@ enum EnumIcons {
   confirmIcon = "confirmIcon",
   visibleIcon = "visibleIcon",
   invisibleIcon = "invisibleIcon",
+  errorIcon = 'errorIcon'
 }
 
 export default EnumIcons;

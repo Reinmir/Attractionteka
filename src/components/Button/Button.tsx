@@ -2,13 +2,18 @@ import React from "react";
 import "./style.scss";
 
 interface ButtonProps extends React.PropsWithChildren {
-
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+  className?: string;
+  
 }
 
-const Button: React.FC<ButtonProps> = ({ children }) => {
+const Button: React.FC<ButtonProps> = ({ children, className, ...props }) => {
   return (
     <>
-      <button className="customButton">{children}</button>
+      <button {...props} className={`customButton ${className}`}>
+        {children}
+      </button>
     </>
   );
 };
