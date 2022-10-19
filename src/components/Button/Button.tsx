@@ -5,12 +5,15 @@ interface ButtonProps extends React.PropsWithChildren {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
   className?: string;
+  
 }
 
-const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ children, className, ...props }) => {
   return (
     <>
-      <button {...props}>{children}</button>
+      <button {...props} className={`customButton ${className}`}>
+        {children}
+      </button>
     </>
   );
 };

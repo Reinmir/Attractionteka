@@ -29,7 +29,6 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
     } else {
       setInputType("password");
     }
-    console.log("1");
   };
 
   const rightIconVisible = useMemo(() => {
