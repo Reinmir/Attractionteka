@@ -1,10 +1,13 @@
 import React from "react";
 
-import './style.scss'
+import "./style.scss";
 
 const MainPage = () => {
-
-  return <div></div>;
+  return (
+    <>
+      <header></header>
+    </>
+  );
 };
 
 export default MainPage;

@@ -12,9 +12,9 @@ import "./style.scss";
 
 const Registration = () => {
   
-  const ababa = (item: InputConfigsProps[]) =>{
+  const handleSubmit = (item: InputConfigsProps[]) =>{
     
-    console.log(item)
+    // console.log(item)
   }
 
   return (
@@ -26,7 +26,7 @@ const Registration = () => {
         text={"Please register to continue!"}
         
       >
-        <FormBuilder  setInputValues={ababa} config={config} label={"Register"} />
+        <FormBuilder  setInputValues={handleSubmit} config={config} label={"Register"} />
         <p className="registration__link">
           Alredy have an account? <Link to="/login">Log in</Link>
         </p>

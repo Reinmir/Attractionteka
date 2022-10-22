@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import ConfigProps from "src/interfaces/config-props";
 
@@ -10,10 +10,6 @@ import ErrorBlock from "../ErrorBlock/ErrorBlock";
 import { useInput } from "src/hooks/useInput";
 
 import "./style.scss";
-import InputConfigsProps from "src/types/InputConfigs";
-import ValidationsProps from "src/interfaces/config-validations";
-
-import * as util from "src/util";
 
 interface FormBuilderProps {
   config: ConfigProps[];
@@ -41,7 +37,11 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
     (item) => item.validError !== "" || item.value === ""
   );
 
-  const onClickSubmit = () => {};
+  const onClickSubmit = () => {
+    itemProperties.some((item) => {});
+  };
+
+
 
   return (
     <>
@@ -79,8 +79,9 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
         {aboveLink}
         <Button
           className={classNameButton}
-          onClick={() => {}}
+          onClick={onClickSubmit}
           disabled={isDisabled}
+          type="submit"
         >
           {label}
         </Button>
