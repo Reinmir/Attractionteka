@@ -7,9 +7,11 @@ import { invisibleIcon, visibleIcon } from "../Input/inputIcons";
 import InputConfigsProps from "src/types/InputConfigs";
 
 interface PasswordInputProps extends ConfigProps {
-  onChange: Function;
-  onBlur: Function;
-  error: any;
+  onChange?: Function;
+  onBlur?: Function;
+  onFocus?: any;
+  error?: any;
+
 }
 
 const PasswordInput: React.FC<PasswordInputProps> = ({
@@ -18,6 +20,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   onChange,
   onBlur,
   error,
+  onFocus,
   ...props
 }) => {
   const [inputType, setInputType] = useState(type);
@@ -52,6 +55,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
         onBlur={onBlur}
         onChange={onChange}
         error={error}
+        onFocus={onFocus}
       />
     </>
   );

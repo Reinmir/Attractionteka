@@ -13,6 +13,7 @@ interface InputProps extends ConfigProps {
   onChange?: any;
   onBlur?: any;
   error?: any;
+  onFocus?: any;
 }
 
 const Input: React.FC<InputProps> = ({

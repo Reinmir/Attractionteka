@@ -28,20 +28,14 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
   className,
   classNameButton,
 }) => {
-  const { checkValidation, handleSubmit, itemProperties, setValue } = useInput({
+  const { handleSubmit, itemProperties, setValue } = useInput({
     config,
     setInputValues,
   });
 
-  const isDisabled = itemProperties.some(
-    (item) => item.validError !== "" || item.value === ""
-  );
-
-  const onClickSubmit = () => {
-    itemProperties.some((item) => {});
-  };
-
-
+  // const isDisabled = itemProperties.some(
+  //   (item) => item.validError !== "" || item.value === ""
+  // );
 
   return (
     <>
@@ -59,7 +53,6 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setValue(e, index)
                   }
-                  onBlur={() => checkValidation(index)}
                   error={item.validError}
                 />
               ) : (
@@ -68,7 +61,6 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setValue(e, index)
                   }
-                  onBlur={() => checkValidation(index)}
                   error={item.validError}
                 />
               )}
@@ -77,12 +69,7 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
           );
         })}
         {aboveLink}
-        <Button
-          className={classNameButton}
-          onClick={onClickSubmit}
-          disabled={isDisabled}
-          type="submit"
-        >
+        <Button className={classNameButton} type="submit">
           {label}
         </Button>
       </form>
