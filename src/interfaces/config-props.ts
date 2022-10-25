@@ -1,5 +1,5 @@
 import ValidationsProps from "./config-validations";
-import EnumIcons from "./enumIcons";
+import EnumIcons from "../enums/enumIcons";
 
 interface ConfigProps {
   name: string;

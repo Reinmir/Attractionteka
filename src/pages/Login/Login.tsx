@@ -1,19 +1,32 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import Button from "src/components/Button/Button";
 
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
 import FormWrapper from "src/components/FormWrapper/FormWrapper";
-import InputConfigsProps from "src/types/InputConfigs";
+import { LocalStorageKey } from "src/enums/localStorageEnum";
+import { FormBuilderReturnType } from "src/interfaces/formbuilder-returnvalue";
+import { Loli } from "../Registration/Registration";
 
 import config from "./config";
 
 import "./style.scss";
 
 const Login = () => {
-  const handleSubmit = (item: InputConfigsProps[]) => {
-    console.log(item);
+  const handleSubmit = (items: FormBuilderReturnType[]) => {
+    const authStorage = JSON.parse(
+      localStorage.getItem(LocalStorageKey.authKey) || ""
+    );
+    const authInput = items.reduce((prev, curr) => {
+      const key = curr.name as keyof Loli;
+      return (prev[key] = curr.value), prev;
+    }, {} as Loli);
+    console.log(JSON.stringify(authStorage));
+    console.log(JSON.stringify(authInput));
+    if (JSON.stringify(authStorage) !== JSON.stringify(authInput)) {
+      console.log("Error");
+    }
+    console.log('Successfuly!')
   };
 
   return (
