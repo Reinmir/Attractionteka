@@ -2,11 +2,13 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
 import FormWrapper from "src/components/FormWrapper/FormWrapper";
+
 import { LocalStorageKey } from "src/enums/localStorageEnum";
 import { FormBuilderReturnType } from "src/interfaces/formbuilder-returnvalue";
-import { Loli } from "../Registration/Registration";
+import { UserInput } from "src/types/UserInput";
 
 import config from "./config";
 
@@ -18,15 +20,16 @@ const Login = () => {
       localStorage.getItem(LocalStorageKey.authKey) || ""
     );
     const authInput = items.reduce((prev, curr) => {
-      const key = curr.name as keyof Loli;
+      const key = curr.name as keyof UserInput;
       return (prev[key] = curr.value), prev;
-    }, {} as Loli);
+    }, {} as UserInput);
     console.log(JSON.stringify(authStorage));
     console.log(JSON.stringify(authInput));
-    if (JSON.stringify(authStorage) !== JSON.stringify(authInput)) {
+    if (JSON.stringify(authStorage) !== JSON.stringify(authInput) || authInput) {
       console.log("Error");
+    } else {
+      console.log("Successfuly!");
     }
-    console.log('Successfuly!')
   };
 
   return (
@@ -47,11 +50,11 @@ const Login = () => {
           config={config}
           label={"Login"}
         />
-
         <p className="login__toRegistration">
           Don't have an account? <Link to="/registration">Sign Up</Link>
         </p>
       </FormWrapper>
+
     </>
   );
 };

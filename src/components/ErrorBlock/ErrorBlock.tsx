@@ -1,5 +1,5 @@
 import React from "react";
-import EnumIcons from "src/enums/enumIcons";
+
 import { errorIcon } from "../Input/inputIcons";
 
 import "./style.scss";
