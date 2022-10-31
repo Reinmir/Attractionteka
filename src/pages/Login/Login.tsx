@@ -1,7 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
-
 
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
 import FormWrapper from "src/components/FormWrapper/FormWrapper";
@@ -15,17 +15,22 @@ import config from "./config";
 import "./style.scss";
 
 const Login = () => {
+  const state = useSelector((state) => state);
+  console.log(state)
+
   const handleSubmit = (items: FormBuilderReturnType[]) => {
-    const authStorage = JSON.parse(
-      localStorage.getItem(LocalStorageKey.authKey) || ""
-    );
+    const userLocalStorage = localStorage.getItem(LocalStorageKey.authKey);
+    const authStorage = userLocalStorage ? JSON.parse(userLocalStorage) : null;
     const authInput = items.reduce((prev, curr) => {
       const key = curr.name as keyof UserInput;
       return (prev[key] = curr.value), prev;
     }, {} as UserInput);
     console.log(JSON.stringify(authStorage));
     console.log(JSON.stringify(authInput));
-    if (JSON.stringify(authStorage) !== JSON.stringify(authInput) || authInput) {
+    if (
+      !authStorage ||
+      JSON.stringify(authStorage) !== JSON.stringify(authInput)
+    ) {
       console.log("Error");
     } else {
       console.log("Successfuly!");
@@ -54,7 +59,6 @@ const Login = () => {
           Don't have an account? <Link to="/registration">Sign Up</Link>
         </p>
       </FormWrapper>
-
     </>
   );
 };

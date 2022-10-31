@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";
 import ErrorBlock from "src/components/ErrorBlock/ErrorBlock";
@@ -6,12 +7,15 @@ import ErrorBlock from "src/components/ErrorBlock/ErrorBlock";
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
 import FormWrapper from "src/components/FormWrapper/FormWrapper";
 import { LocalStorageKey } from "src/enums/localStorageEnum";
+import { useAppDispatch } from "src/hooks/useAppDispatch";
 import { FormBuilderReturnType } from "src/interfaces/formbuilder-returnvalue";
 import { UserInput } from "src/types/UserInput";
 
 import config from "./config";
 
 import "./style.scss";
+
+const dispatch = useAppDispatch();
 
 const Registration = () => {
   const handleSubmit = (items: FormBuilderReturnType[]) => {
@@ -23,7 +27,6 @@ const Registration = () => {
         return (prev[key] = curr.value), prev;
       }, {} as UserInput);
     localStorage.setItem(LocalStorageKey.authKey, JSON.stringify(res));
-
     console.log(res);
   };
 

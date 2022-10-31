@@ -1,4 +1,4 @@
 export type UserInput = {
-    emai: string,
+    email: string,
     password: string
 }
