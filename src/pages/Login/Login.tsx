@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
+import ErrorBlock from "src/components/ErrorBlock/ErrorBlock";
 
 import FormBuilder from "src/components/FormBuilder/FormBuilder";
 import FormWrapper from "src/components/FormWrapper/FormWrapper";
 
 import { LocalStorageKey } from "src/enums/localStorageEnum";
 import { FormBuilderReturnType } from "src/interfaces/formbuilder-returnvalue";
+import { RootState } from "src/store";
 import { UserInput } from "src/types/UserInput";
 
 import config from "./config";
@@ -15,8 +17,10 @@ import config from "./config";
 import "./style.scss";
 
 const Login = () => {
-  const state = useSelector((state) => state);
-  console.log(state)
+  const state = useSelector((state: RootState) => state);
+  console.log(state);
+
+  const [isError, setIsError] = useState(false);
 
   const handleSubmit = (items: FormBuilderReturnType[]) => {
     const userLocalStorage = localStorage.getItem(LocalStorageKey.authKey);
@@ -31,8 +35,10 @@ const Login = () => {
       !authStorage ||
       JSON.stringify(authStorage) !== JSON.stringify(authInput)
     ) {
+      setIsError(true);
       console.log("Error");
     } else {
+      setIsError(false);
       console.log("Successfuly!");
     }
   };
@@ -51,6 +57,13 @@ const Login = () => {
             <Link className="login__toForgot" to="/forgot_password">
               Forgot password?
             </Link>
+          }
+          incorrect={
+            isError && (
+              <ErrorBlock className="login__error" iconClassName="login__error_icon">
+                Incorrect email or password! Try again.
+              </ErrorBlock>
+            )
           }
           config={config}
           label={"Login"}

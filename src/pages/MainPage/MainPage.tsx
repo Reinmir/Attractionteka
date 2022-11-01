@@ -5,7 +5,7 @@ import "./style.scss";
 const MainPage = () => {
   return (
     <>
-      <header></header>
+      <h1>JOPA</h1>
     </>
   );
 };

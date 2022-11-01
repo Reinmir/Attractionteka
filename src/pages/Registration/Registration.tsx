@@ -8,6 +8,7 @@ import FormBuilder from "src/components/FormBuilder/FormBuilder";
 import FormWrapper from "src/components/FormWrapper/FormWrapper";
 import { LocalStorageKey } from "src/enums/localStorageEnum";
 import { useAppDispatch } from "src/hooks/useAppDispatch";
+import { useAppSelector } from "src/hooks/useAppSelector";
 import { FormBuilderReturnType } from "src/interfaces/formbuilder-returnvalue";
 import { UserInput } from "src/types/UserInput";
 
@@ -15,9 +16,10 @@ import config from "./config";
 
 import "./style.scss";
 
-const dispatch = useAppDispatch();
-
 const Registration = () => {
+  const store = useAppSelector((state) => state);
+  console.log(store);
+  const dispatch = useAppDispatch();
   const handleSubmit = (items: FormBuilderReturnType[]) => {
     const res = items
       .filter((item) => item.name === "email" || item.name === "password")
@@ -27,6 +29,8 @@ const Registration = () => {
         return (prev[key] = curr.value), prev;
       }, {} as UserInput);
     localStorage.setItem(LocalStorageKey.authKey, JSON.stringify(res));
+    // dispatch()
+
     console.log(res);
   };
 

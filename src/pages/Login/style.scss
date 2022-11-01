@@ -17,6 +17,15 @@
   &__button {
     margin-top: 150px;
   }
+  &__error {
+    position: absolute;
+    top: 450px;
+    &_icon {
+      position: absolute;
+      left: 2px;
+      top: 5px;
+    }
+  }
 }
 
 .input {
