@@ -1,8 +1,8 @@
 import { UserAction, UserActionTypes, UserState } from "src/types/User";
 
 const initalState: UserState = {
-  email: "",
-  password: "",
+  user: null,
+  isAuth: false,
 };
 
 export const UserReducer = (
@@ -12,8 +12,9 @@ export const UserReducer = (
   switch (action.type) {
     case UserActionTypes.ADD_USER_INFO:
       return {
-        email: action.payload,
-        password: action.payload,
+        ...state,
+        user: action.payload,
+        isAuth: true,
       };
 
     default:

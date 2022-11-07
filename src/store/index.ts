@@ -1,9 +1,8 @@
-import { createStore, combineReducers } from "redux";
-import { UserReducer } from "src/reducers/userReducer";
+import { createStore,applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { rootReducer } from "src/reducers";
 
-const rootReducer = combineReducers({ user: UserReducer });
+export const store = createStore(rootReducer, applyMiddleware(thunk));
 
-export const store = createStore(rootReducer);
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+

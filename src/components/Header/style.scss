@@ -1,0 +1,11 @@
+.header {
+  &__container {
+    background: url(../../assests/img/Background-header.png);
+    background-size: cover;
+    min-height: 5vh;
+  }
+  &__logoIcon {
+    width: 250px;
+    height: 10px;
+  }
+}

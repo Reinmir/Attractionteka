@@ -1,6 +1,12 @@
-export interface UserState {
-  email: string;
-  password: string;
+export interface UserState{
+ user: UserData | null,
+ isAuth: boolean
+}
+
+export interface UserData {
+    email: string;
+    password: string;
+
 }
 
 export enum UserActionTypes {
@@ -9,7 +15,7 @@ export enum UserActionTypes {
 
 export interface AddUserAction {
   type: UserActionTypes.ADD_USER_INFO;
-  payload: string;
+  payload: UserData;
 }
 
 export type UserAction = AddUserAction;
