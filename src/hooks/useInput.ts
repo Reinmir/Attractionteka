@@ -27,8 +27,7 @@ export const useInput = ({ config, setInputValues }: useInputProps) => {
 
   const getError = (
     value: string,
-    validations: ValidationsProps[] | undefined = [],
-    index: number
+    validations: ValidationsProps[]
   ) => {
     let res = "";
     for (const validation of validations) {
@@ -63,26 +62,31 @@ export const useInput = ({ config, setInputValues }: useInputProps) => {
     return res;
   };
 
-  const checkValidation = (index: number) => {
-    const newItemProperties = [...itemProperties];
-    if (newItemProperties[index].validations) {
-      newItemProperties[index].validError = getError(
-        newItemProperties[index].value,
-        newItemProperties[index].validations,
-        index
-      );
-    }
+  const checkAndShowError = () => {
+    const newItemProperties = itemProperties.map((item) => {
+      if (item.validations) {
+        item.validError = getError(item.value, item.validations);
+      }
+      return item;
+    });
     setItemProperties(newItemProperties);
+    return newItemProperties;
   };
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setInputValues?.(itemProperties);
+    const newItemProperties = checkAndShowError();
+    const res = newItemProperties.every((item) => item.validError === "");
+    if (res) {
+      setInputValues?.(
+        itemProperties.map((item) => ({ name: item.name, value: item.value }))
+      );
+    }
   };
   return {
     itemProperties,
     setValue,
     handleSubmit,
-    checkValidation,
+    checkAndShowError,
   };
 };

@@ -1,0 +1,12 @@
+.mainpage {
+  &__container {
+    background: url(../../assests/img/Background-mainpage.png) no-repeat center
+      center fixed;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  &__wrapper{
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}

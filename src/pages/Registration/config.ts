@@ -1,7 +1,7 @@
 import { invisibleIcon, visibleIcon } from "src/components/Input/inputIcons";
 import configProps from "src/interfaces/config-props";
 
-import EnumIcons from "src/interfaces/enumIcons";
+import EnumIcons from "src/enums/enumIcons";
 
 const config: configProps[] = [
   {

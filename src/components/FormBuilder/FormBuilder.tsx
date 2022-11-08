@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import ConfigProps from "src/interfaces/config-props";
 
@@ -9,11 +9,16 @@ import PasswordInput from "../PasswordInput/PasswordInput";
 import ErrorBlock from "../ErrorBlock/ErrorBlock";
 import { useInput } from "src/hooks/useInput";
 
+import "./style.scss";
+
 interface FormBuilderProps {
   config: ConfigProps[];
   setInputValues?: Function;
   aboveLink?: React.ReactNode;
-  label: string;
+  label?: string;
+  incorrectLabel?: React.ReactNode;
+  className?: string;
+  classNameButton?: string;
 }
 
 const FormBuilder: React.FC<FormBuilderProps> = ({
@@ -21,19 +26,22 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
   setInputValues,
   aboveLink,
   label,
+  className,
+  incorrectLabel,
+  classNameButton,
 }) => {
-  const { checkValidation, handleSubmit, itemProperties, setValue } = useInput({
+  const { handleSubmit, itemProperties, setValue } = useInput({
     config,
     setInputValues,
   });
 
-  const isDisabled = itemProperties.some(
-    (item) => item.validError !== "" || item.value === ""
-  );
-
   return (
     <>
-      <form onSubmit={handleSubmit} className="form__container" action="submit">
+      <form
+        onSubmit={handleSubmit}
+        className={`form__container ${className}`}
+        action="submit"
+      >
         {itemProperties.map((item, index) => {
           return (
             <>
@@ -43,7 +51,6 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setValue(e, index)
                   }
-                  onBlur={() => checkValidation(index)}
                   error={item.validError}
                 />
               ) : (
@@ -52,7 +59,6 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setValue(e, index)
                   }
-                  onBlur={() => checkValidation(index)}
                   error={item.validError}
                 />
               )}
@@ -61,7 +67,11 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
           );
         })}
         {aboveLink}
-        <Button disabled={isDisabled}>{label}</Button>
+
+        {incorrectLabel}
+        <Button className={classNameButton} type="submit">
+          {label}
+        </Button>
       </form>
     </>
   );
