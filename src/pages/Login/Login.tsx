@@ -21,33 +21,26 @@ import "./style.scss";
 
 const Login = () => {
   const [isError, setIsError] = useState(false);
-
   const user = useAppSelector((state) => state.user);
-  console.log(user);
   const { setUserData } = UseActions();
   const navigate = useNavigate();
 
   const handleSubmit = (items: FormBuilderReturnType[]) => {
-    const userLocalStorage = localStorage.getItem(LocalStorageKey.authKey);
+    const userLocalStorage = localStorage.getItem(LocalStorageKey.Auth);
     const authStorage = userLocalStorage ? JSON.parse(userLocalStorage) : null;
     const authInput = items.reduce((prev, curr) => {
       const key = curr.name as keyof UserInput;
       return (prev[key] = curr.value), prev;
     }, {} as UserInput);
-    console.log(JSON.stringify(authStorage));
-    console.log(JSON.stringify(authInput));
     if (
       !authStorage ||
       JSON.stringify(authStorage) !== JSON.stringify(authInput)
     ) {
       setIsError(true);
-      console.log("Error");
     } else {
       setIsError(false);
       setUserData(authInput);
-      console.log(user);
       navigate(PageRoutes.MainPage);
-      console.log("Successfuly!");
     }
   };
 
@@ -68,7 +61,7 @@ const Login = () => {
                 Forgot password?
               </Link>
             }
-            incorrect={
+            incorrectLabel={
               isError && (
                 <ErrorBlock
                   className="login__error"

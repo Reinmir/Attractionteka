@@ -27,7 +27,7 @@ export const useInput = ({ config, setInputValues }: useInputProps) => {
 
   const getError = (
     value: string,
-    validations: ValidationsProps[] | undefined = []
+    validations: ValidationsProps[]
   ) => {
     let res = "";
     for (const validation of validations) {

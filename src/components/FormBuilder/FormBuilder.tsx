@@ -16,7 +16,7 @@ interface FormBuilderProps {
   setInputValues?: Function;
   aboveLink?: React.ReactNode;
   label?: string;
-  incorrect?: React.ReactNode;
+  incorrectLabel?: React.ReactNode;
   className?: string;
   classNameButton?: string;
 }
@@ -27,7 +27,7 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
   aboveLink,
   label,
   className,
-  incorrect,
+  incorrectLabel,
   classNameButton,
 }) => {
   const { handleSubmit, itemProperties, setValue } = useInput({
@@ -68,7 +68,7 @@ const FormBuilder: React.FC<FormBuilderProps> = ({
         })}
         {aboveLink}
 
-        {incorrect}
+        {incorrectLabel}
         <Button className={classNameButton} type="submit">
           {label}
         </Button>

@@ -5,8 +5,8 @@ import "./style.scss";
 
 const MainPage = () => {
   return (
-    <>  
-    <Header></Header>
+    <>
+      <Header />
       <div className="mainpage__container">
         <div className="mainpage__wrapper">
           <div></div>

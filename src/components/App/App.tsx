@@ -21,9 +21,9 @@ const App = () => {
   const { setUserData } = UseActions();
 
   useEffect(() => {
-    const User = localStorage.getItem(LocalStorageKey.authKey);
-    if (User) {
-      setUserData(JSON.parse(User));
+    const user = localStorage.getItem(LocalStorageKey.Auth);
+    if (user) {
+      setUserData(JSON.parse(user));
     }
   }, []);
 

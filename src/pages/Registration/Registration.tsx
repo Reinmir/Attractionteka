@@ -22,7 +22,6 @@ import "./style.scss";
 const Registration = () => {
   const navigate = useNavigate();
   const user = useAppSelector((state) => state.user);
-  console.log(user);
   const { setUserData } = UseActions();
   const handleSubmit = (items: FormBuilderReturnType[]) => {
     const res = items
@@ -32,11 +31,9 @@ const Registration = () => {
 
         return (prev[key] = curr.value), prev;
       }, {} as UserInput);
-    localStorage.setItem(LocalStorageKey.authKey, JSON.stringify(res));
+    localStorage.setItem(LocalStorageKey.Auth, JSON.stringify(res));
     setUserData(res);
     navigate(PageRoutes.MainPage);
-    console.log("store", user);
-    console.log("res", res);
   };
 
   return (

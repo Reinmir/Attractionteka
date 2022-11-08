@@ -10,10 +10,9 @@ interface InputProps extends ConfigProps {
   toggleRightIcon?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
   value?: string;
-  onChange?: any;
-  onBlur?: any;
-  error?: any;
-  onFocus?: any;
+  onChange?: (e:React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  error?: string;
 }
 
 const Input: React.FC<InputProps> = ({
