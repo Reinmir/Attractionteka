@@ -6,13 +6,28 @@
     min-width: 100vw;
     position: fixed;
   }
-  &__logoIcon {
-    width: 20px;
-    height: 20px;
+
+  &__logout {
+    background: none;
+    border: none;
+    cursor: pointer;
   }
-  &__logout{
-    position: absolute;
-    left: 1600px;
-    top: 15px;
+  &__burgerMenu {
+    border: none;
+    background: none;
+    cursor: pointer;
   }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__ulLogo {
+    list-style-type: none;
+  }
+  &__ulIcons {
+    list-style-type: none;
+  }
+
 }

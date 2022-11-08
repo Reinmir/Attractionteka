@@ -1,6 +1,5 @@
 import React from "react";
 import { Header } from "src/components/Header/Header";
-
 import "./style.scss";
 
 const MainPage = () => {
@@ -9,7 +8,14 @@ const MainPage = () => {
       <Header />
       <div className="mainpage__container">
         <div className="mainpage__wrapper">
-          <div></div>
+          <div>
+            <div className="mainpage__entrancePhoto">
+              <img
+                src={require("../../assests/img/mainpage.png")}
+                alt="Kharkiv fountain"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>

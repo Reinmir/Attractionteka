@@ -2,11 +2,20 @@
   &__container {
     background: url(../../assests/img/Background-mainpage.png) no-repeat center
       center fixed;
-    background-size: cover;
+    background-size: 100% auto;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
   }
-  &__wrapper{
-    min-height: 100vh;
-    min-width: 100vw;
+  &__wrapper {
+    background: white;
+    width: 1200px;
+    margin-top: 85px;
   }
+  &__entrancePhoto {
+   width: 1200px;
+   display: flex;
+   flex-direction: column;
+  }
+
 }

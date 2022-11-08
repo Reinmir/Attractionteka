@@ -1,7 +1,7 @@
 export const logoIcon = (
   <svg
-    width="418"
-    height="53"
+    width="248"
+    height="48"
     viewBox="0 0 418 53"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ export const logOutIcon = (
 
 export const burgerMenuIcon = (
   <svg
-    width="26"
+    width="20"
     height="20"
     viewBox="0 0 26 20"
     fill="none"

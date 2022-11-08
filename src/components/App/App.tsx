@@ -7,6 +7,7 @@ import { UseActions } from "src/hooks/useActions";
 import { useAppSelector } from "src/hooks/useAppSelector";
 
 import { IRoute } from "src/interfaces/IRoute";
+import ForgotPassword from "src/pages/ForgotPassword/ForgotPassword";
 
 import Login from "src/pages/Login/Login";
 import MainPage from "src/pages/MainPage/MainPage";
@@ -43,6 +44,10 @@ const App = () => {
       path: PageRoutes.Registration,
       element: <Registration />,
     },
+    {
+      path: PageRoutes.ForgotPassword,
+      element: <ForgotPassword/>
+    }
   ];
 
   return (
