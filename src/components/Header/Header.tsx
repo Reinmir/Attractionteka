@@ -3,6 +3,10 @@ import { logoIcon, logOutIcon } from "./HeaderIcons";
 import "./style.scss";
 
 export const Header: React.FC = () => {
+
+  // const handleLogOut = removeUser()
+
+
   return (
     <div className="header__container">
       <div className="header__logoIcon">{logoIcon}</div>
