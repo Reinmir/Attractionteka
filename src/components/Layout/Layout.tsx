@@ -10,7 +10,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       
       <div className="layout__container">
         <div className="logoIcon">{logoIcon}</div>
-      {children}</div>;
+      {children}</div>
     </>
   );
 };

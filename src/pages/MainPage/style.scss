@@ -12,10 +12,82 @@
     width: 1200px;
     margin-top: 85px;
   }
-  &__entrancePhoto {
-   width: 1200px;
-   display: flex;
-   flex-direction: column;
+  &__photoContainer {
+    position: relative;
+    text-align: center;
   }
+  &__entrancePhoto {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-weight: 900;
+  }
+  &__subtitle {
+    font-weight: 400;
+  }
+  &__text {
+    font-weight: 400;
+  }
+  &__textContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  &__textBlock {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 70px;
+    border: 1px solid #ffffff;
+  }
+  &__subtext {
+    color: #3949ab;
+    font-weight: 900;
+    font-size: 36px;
+    margin-top: 90px;
+    margin-left: 25px;
+  }
+  &__attractionsBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__attractions {
+    min-width: 440px;
 
+    border-radius: 12px;
+    margin: 5px;
+  }
+  &__textAttraction {
+    min-width: 200px;
+    border-radius: 12px;
+  }
+  &__newsBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__news {
+    border: 1px solid black;
+    border-radius: 12px;
+  }
+}
+
+.cathedral {
+  width: 285px;
+  height: 400px;
+  cursor: pointer;
+}
+.monument {
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+}
+
+.cabelcar {
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
 }
