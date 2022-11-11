@@ -1,0 +1,32 @@
+.mainpage {
+  &__newsBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__news {
+    min-width: 380px;
+    border-radius: 12px;
+    margin: 0 auto;
+
+    padding: 5px;
+  }
+}
+.news {
+  &__textBlock {
+    min-height: 138px;
+    border-radius: 12px;
+    background: white;
+    text-align: start;
+    padding-left: 20px;
+    overflow: hidden;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 30px;
+    border: none;
+    
+  }
+}

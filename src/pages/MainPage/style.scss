@@ -1,14 +1,18 @@
 .mainpage {
   &__container {
-    background: url(../../assests/img/Background-mainpage.png) no-repeat center
-      center fixed;
+    background: url(../../assests/img/Background-mainpage.png);
     background-size: 100% auto;
     min-height: 100vh;
     display: flex;
     justify-content: center;
   }
   &__wrapper {
-    background: white;
+    background: linear-gradient(
+      180deg,
+      #f8f8f8 0%,
+      #dddddf 51.35%,
+      #acacac 100%
+    );
     width: 1200px;
     margin-top: 85px;
   }
@@ -50,28 +54,6 @@
     font-size: 36px;
     margin-top: 90px;
     margin-left: 25px;
-  }
-  &__attractionsBlock {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__attractions {
-    min-width: 440px;
-
-    border-radius: 12px;
-    margin: 5px;
-  }
-  &__textAttraction {
-    min-width: 200px;
-    border-radius: 12px;
-  }
-  &__newsBlock {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__news {
-    border: 1px solid black;
-    border-radius: 12px;
   }
 }
 
