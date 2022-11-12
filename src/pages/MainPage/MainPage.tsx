@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router";
 
 import { Header } from "src/components/Header/Header";
-import { PageRoutes } from "src/constants/routeNames";
-import { RateStareIcon } from "./MainPageIcons";
+
 import { News } from "./News/News";
 import { PopularAttractions } from "./PopularAttractions/PopularAttractions";
 import "./style.scss";

@@ -9,12 +9,13 @@ import monument from "../../../assests/img/TarasShevchenko.jpg";
 import cathedral from "../../../assests/img/TheCathedral.jpg";
 
 import "./style.scss";
+import { PageRoutes } from "src/constants/routeNames";
 
 export const PopularAttractions: React.FC = () => {
   const navigate = useNavigate();
   const handleRedirect = () => {
-    // navigate(PageRoutes.Home);
-    alert(`It's working!`);
+    navigate(PageRoutes.Home);
+    // alert(`It's working!`);
   };
   return (
     <>
