@@ -15,6 +15,6 @@ declare module "*.svg" {
   export default path;
 }
 declare module "*.module.scss" {
-  const path: string;
+  const path: any;
   export default path;
 }

@@ -2,8 +2,9 @@ import React from "react";
 
 import { Header } from "src/components/Header/Header";
 
-import { News } from "./News/News";
+import { NewsBlock } from "./News/NewsBlock";
 import { PopularAttractions } from "./PopularAttractions/PopularAttractions";
+import mainpage from "../../assests/img/mainpage.png"
 import "./style.scss";
 
 const MainPage = () => {
@@ -15,7 +16,7 @@ const MainPage = () => {
           <div className="mainpage__photoContainer">
             <div className="mainpage__entrancePhoto">
               <img
-                src={require("../../assests/img/mainpage.png")}
+                src={mainpage}
                 alt="Kharkiv fountain"
               />
               <div className="mainpage__textContainer">
@@ -30,7 +31,7 @@ const MainPage = () => {
             </div>
           </div>
           <PopularAttractions />
-          <News />
+          <NewsBlock />
         </div>
       </div>
     </>

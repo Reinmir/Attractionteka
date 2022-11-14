@@ -2,15 +2,18 @@
   &__newsBlock {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
+
   &__news {
     min-width: 380px;
     border-radius: 12px;
     margin: 0 auto;
-
     padding: 5px;
   }
+
 }
+
 .news {
   &__textBlock {
     min-height: 138px;
@@ -19,7 +22,10 @@
     text-align: start;
     padding-left: 20px;
     overflow: hidden;
+    position: relative;
+    top: -25px
   }
+
   &__button {
     display: flex;
     justify-content: center;
@@ -27,6 +33,6 @@
     font-weight: 400;
     font-size: 30px;
     border: none;
-    
+
   }
 }

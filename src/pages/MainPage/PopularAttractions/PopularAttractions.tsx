@@ -2,14 +2,14 @@ import React from "react";
 
 import { useNavigate } from "react-router";
 
+import "./style.scss";
+
+import { PageRoutes } from "src/constants/routeNames";
+
+import Attractions, { Attraction } from "./Attractions";
+
 import { RateStareIcon } from "../MainPageIcons";
 
-import cablecar from "../../../assests/img/CableCar.jpg";
-import monument from "../../../assests/img/TarasShevchenko.jpg";
-import cathedral from "../../../assests/img/TheCathedral.jpg";
-
-import "./style.scss";
-import { PageRoutes } from "src/constants/routeNames";
 
 export const PopularAttractions: React.FC = () => {
   const navigate = useNavigate();
@@ -17,57 +17,30 @@ export const PopularAttractions: React.FC = () => {
     navigate(PageRoutes.Home);
     // alert(`It's working!`);
   };
+
+  const config: Attraction[] = Attractions;
   return (
     <>
+
       <p className="mainpage__subtext">Popular attractions</p>
       <div className="mainpage__attractionsBlock">
-        <div className="mainpage__attractions">
-          <img
-            onClick={handleRedirect}
-            className="cabelcar"
-            src={cablecar}
-            alt=""
-          />
-          {/* <div className="mainpage__rateBlock">{RateStareIcon}</div> */}
-          <div className="mainpage__textAttraction">
-            <h2 className="attraction__title">Cable Car</h2>
-            <p>
-              Suspended cable car in Kharkov is a walking and transport system
-              that connects Sumskaya Street with Pavlovo Pole microdistrict
-              through the...
-            </p>
+        {config.map((item) =>
+
+          <div className="mainpage__attractions">
+            <img
+              onClick={handleRedirect}
+              className="imgAttr"
+              src={item.img}
+              alt=""
+            />
+            <div className="mainpage__textAttraction">
+              <h2 className="attraction__title">{item.title}</h2>
+              <p>
+                {item.text}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="mainpage__attractions">
-          <img
-            onClick={handleRedirect}
-            className="monument"
-            src={monument}
-            alt=""
-          />
-          {/* <div className="mainpage__rateBlock">{RateStareIcon}</div> */}
-          <div className="mainpage__textAttraction">
-            <h2 className="attraction__title">Monument to Taras Shevchenko</h2>
-            <p>
-              The monument to Taras Shevchenko is a monument to the Ukrainian
-              poet, writer, artist and thinker Taras Grigorievich Shevchenko...
-            </p>
-          </div>
-        </div>
-        <div className="mainpage__attractions">
-          <img
-            onClick={handleRedirect}
-            className="cathedral"
-            src={cathedral}
-            alt=""
-          />
-          {/* <div className="mainpage__rateBlock">{RateStareIcon}</div> */}
-          <div className="mainpage__rightCard ">
-            <h2 className="attraction__title">The Cathedral</h2>
-            <p>Text</p>
-          </div>
-        </div>
-      </div>
+        )}</div>
     </>
   );
 };
