@@ -2,13 +2,17 @@
   &__attractionsBlock {
     display: flex;
     justify-content: space-between;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: auto;
+  }
+  &__attractionsBlock::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(255, 255, 255, 0.0);
   }
 
   &__attractions {
     margin: 20px;
   }
+
 
   &__textAttraction {
     min-height: 155px;

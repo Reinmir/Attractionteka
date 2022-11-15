@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { useNavigate } from "react-router";
 
@@ -9,6 +9,7 @@ import { PageRoutes } from "src/constants/routeNames";
 import Attractions, { Attraction } from "./Attractions";
 
 import { RateStareIcon } from "../MainPageIcons";
+import { RateStarBlock } from "../RateStarBlock/RateStarBlock";
 
 
 export const PopularAttractions: React.FC = () => {
@@ -26,7 +27,8 @@ export const PopularAttractions: React.FC = () => {
       <div className="mainpage__attractionsBlock">
         {config.map((item) =>
 
-          <div className="mainpage__attractions">
+          <div className="mainpage__attractions" >
+            <RateStarBlock peopleRated={item.peopleRated} rate={item.rate} />
             <img
               onClick={handleRedirect}
               className="imgAttr"

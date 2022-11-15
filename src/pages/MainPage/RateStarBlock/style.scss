@@ -1,0 +1,39 @@
+.ratestar {
+    &__container {
+        position: relative;
+    }
+
+    &__wrapper {
+        position: absolute;
+        min-width: 150px;
+        height: 50px;
+        top: 15px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+    }
+
+    &__rate {
+        font-weight: 400;
+        font-size: 20px;
+        color: #000000;
+        position: absolute;
+        top: -10px;
+        left: 55px;
+    }
+
+    &__rateIcon {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+
+    &__peopleRated {
+        position: absolute;
+        top: -10px;
+        left: 90px;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 300;
+        font-size: 20px;
+    }
+}
