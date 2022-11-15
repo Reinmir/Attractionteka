@@ -12,35 +12,37 @@ export interface News {
     img: string
 }
 
+
+
 const NewsCard: News[] = [
     {
         title: 'News Title',
-        text: "text",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore dignissimos quam unde excepturi aliquam nobis provident.Distinctio, ad itaque.Sit aut laboriosam quasi ullam, illum eveniet rerum voluptates libero labore.",
         img: news_1
     },
     {
         title: 'News Title',
-        text: "text",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore dignissimos quam unde excepturi aliquam nobis provident.Distinctio, ad itaque.Sit aut laboriosam quasi ullam, illum eveniet rerum voluptates libero labore.",
         img: news_2
     },
     {
         title: 'News Title',
-        text: "text",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore dignissimos quam unde excepturi aliquam nobis provident.Distinctio, ad itaque.Sit aut laboriosam quasi ullam, illum eveniet rerum voluptates libero labore.",
         img: news_3
     },
     {
         title: 'News Title',
-        text: "text",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore dignissimos quam unde excepturi aliquam nobis provident.Distinctio, ad itaque.Sit aut laboriosam quasi ullam, illum eveniet rerum voluptates libero labore.",
         img: news_4
     },
     {
         title: 'News Title',
-        text: 'text',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore dignissimos quam unde excepturi aliquam nobis provident.Distinctio, ad itaque.Sit aut laboriosam quasi ullam, illum eveniet rerum voluptates libero labore.',
         img: news_5
     },
     {
         title: 'News Title',
-        text: "text",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore dignissimos quam unde excepturi aliquam nobis provident.Distinctio, ad itaque.Sit aut laboriosam quasi ullam, illum eveniet rerum voluptates libero labore.",
         img: news_6
     }
 ]

@@ -28,7 +28,7 @@ const Attractions: Attraction[] = [
     },
     {
         title: 'The Cathedral',
-        text: ' Text',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ad incidunt dignissimos, vitae omnis veniam adipisci dolore sequi in deleniti beatae natus?',
         img: cathedral,
         peopleRated: '(184)',
         rate: '4.9'
