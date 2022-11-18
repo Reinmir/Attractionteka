@@ -1,0 +1,47 @@
+.mainpage {
+  &__attractionsBlock {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+  }
+  &__attractionsBlock::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(255, 255, 255, 0.0);
+  }
+
+  &__attractions {
+    margin: 20px;
+  }
+
+
+  &__textAttraction {
+    min-height: 150px;
+    border-radius: 12px;
+    background: white;
+    text-align: start;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+    top: -25px;
+  }
+
+  &__rightCard {
+    min-height: 155px;
+    background: white;
+    text-align: start;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+}
+
+.imgAttr {
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+}

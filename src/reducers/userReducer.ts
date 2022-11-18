@@ -16,7 +16,13 @@ export const UserReducer = (
         user: action.payload,
         isAuth: true,
       };
-
+      case UserActionTypes.REMOVE_USER_INFO:{
+        return{
+          ...state,
+          user: action.payload,
+          isAuth: false
+        }
+      }
     default:
       return state;
   }

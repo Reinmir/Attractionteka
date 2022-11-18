@@ -1,0 +1,13 @@
+.forgotpw {
+  &__container {
+    background: url(../../assests/img/background.png) no-repeat center center
+      fixed;
+    background-size: cover;
+  }
+  &__toLogin {
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    
+  }
+}

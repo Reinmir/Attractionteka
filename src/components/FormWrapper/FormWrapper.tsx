@@ -17,9 +17,13 @@ const FormWrapper: React.FC<FormWrapperProps> = ({
   return (
     <>
       <div className="formwrapper__wrapper">
-        <h1 className="formwrapper__title">{title}</h1>
-        <h2 className="formwrapper__subtitle">{subtitle}</h2>
-        <h3 className="formwrapper__text">{text}</h3>
+        <div className="formwrapper__semicircle"></div>
+        <div className="formwrapper__textBlock">
+          <h1 className="formwrapper__title">{title}</h1>
+          <h2 className="formwrapper__subtitle">{subtitle}</h2>
+          <h3 className="formwrapper__text">{text}</h3>
+        </div>
+
         {children}
       </div>
     </>

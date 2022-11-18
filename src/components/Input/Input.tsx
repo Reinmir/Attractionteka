@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ConfigProps from "src/interfaces/config-props";
 
@@ -10,7 +10,7 @@ interface InputProps extends ConfigProps {
   toggleRightIcon?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
   value?: string;
-  onChange?: (e:React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   error?: string;
 }

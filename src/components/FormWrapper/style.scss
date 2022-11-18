@@ -9,17 +9,39 @@
     min-width: 370px;
     background-color: white;
     border-radius: 15px;
+    overflow: hidden;
   }
+
+&__textBlock{
+  margin: 0 auto;
+  padding: 0 auto;
+  }
+
   &__title {
-    color: #3949ab;
+    color: white;
     font-weight: 900;
   }
+
   &__subtitle {
-    color: #3949ab;
+    color: white;
     font-weight: 700;
+
   }
+
   &__text {
-    color: #3949ab;
+    color: white;
     font-weight: 400;
+
+  }
+
+  &__semicircle {
+    position: absolute;
+    width: 780px;
+    height: 585px;
+    top: -400px;
+    left: -200px;
+    z-index: -1;
+    border-radius: 200%;
+    background: #3949ab;
   }
 }

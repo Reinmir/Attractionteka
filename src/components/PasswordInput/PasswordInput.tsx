@@ -1,10 +1,12 @@
 import React, { useState, useMemo } from "react";
+
 import Input from "../Input/Input";
+
 import ConfigProps from "src/interfaces/config-props";
-import "./style.scss";
 
 import { invisibleIcon, visibleIcon } from "../Input/inputIcons";
-import InputConfigsProps from "src/types/InputConfigs";
+
+import "./style.scss";
 
 interface PasswordInputProps extends ConfigProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -46,7 +48,6 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
         rightIcon={rightIconVisible}
         {...props}
         type={inputType}
-  
       />
     </>
   );

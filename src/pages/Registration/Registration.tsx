@@ -10,7 +10,7 @@ import { PageRoutes } from "src/constants/routeNames";
 import { LocalStorageKey } from "src/enums/localStorageEnum";
 
 import { UseActions } from "src/hooks/useActions";
-import { useAppSelector } from "src/hooks/useAppSelector";
+
 
 import { FormBuilderReturnType } from "src/interfaces/formbuilder-returnvalue";
 import { UserInput } from "src/types/UserInput";
@@ -21,14 +21,12 @@ import "./style.scss";
 
 const Registration = () => {
   const navigate = useNavigate();
-  const user = useAppSelector((state) => state.user);
   const { setUserData } = UseActions();
   const handleSubmit = (items: FormBuilderReturnType[]) => {
     const res = items
       .filter((item) => item.name === "email" || item.name === "password")
       .reduce((prev, curr) => {
         const key = curr.name as keyof UserInput;
-
         return (prev[key] = curr.value), prev;
       }, {} as UserInput);
     localStorage.setItem(LocalStorageKey.Auth, JSON.stringify(res));
